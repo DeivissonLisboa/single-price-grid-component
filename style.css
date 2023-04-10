@@ -21,6 +21,8 @@
 
   --fw-1: 400;
   --fw-2: 700;
+
+  --shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1);
 }
 
 *,
@@ -45,7 +47,7 @@ main {
   width: min(85vw, 40em);
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 @media (width > 600px) {
@@ -117,4 +119,5 @@ p[data-color="green"] {
   font-size: var(--fs-1);
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: var(--shadow);
 }
