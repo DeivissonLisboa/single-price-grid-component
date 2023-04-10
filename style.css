@@ -35,4 +35,84 @@
 body {
   min-height: 100vh;
   font-family: var(--ff);
+  background-color: var(--clr-neutral-1);
+  display: grid;
+  place-items: center;
+  font-size: var(--fs-1);
+}
+
+main {
+  width: min(85vw, 40em);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (width > 600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  *[data-span="span-2"] {
+    grid-column: span 2;
+  }
+}
+
+main > div {
+  padding: 2.5rem;
+  display: grid;
+  gap: 1.25rem;
+  color: var(--clr-neutral-1);
+}
+
+main > div > div {
+  display: grid;
+  gap: 0.75rem;
+}
+
+main > div:nth-child(1) {
+  background-color: #fff;
+  color: var(--clr-neutral-2);
+}
+
+main > div:nth-child(2) {
+  background-color: hsl(var(--clr-hsl-primary-1));
+}
+
+main > div:nth-child(3) {
+  background-color: hsla(var(--clr-hsl-primary-1), 0.8);
+}
+
+h1 {
+  font-size: var(--fs-3);
+  color: var(--clr-primary-1);
+}
+
+h2 {
+  font-size: var(--fs-2);
+  color: #fff;
+}
+
+div span {
+  font-size: var(--fs-5);
+  display: inline-block;
+  font-weight: var(--fw-2);
+  margin-right: 0.5rem;
+}
+
+p[data-color="green"] {
+  color: var(--clr-primary-2);
+}
+
+.button {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  color: #fff;
+  background-color: hsl(var(--clr-hsl-primary-2));
+  font-weight: 700;
+  font-size: var(--fs-1);
+  border-radius: 5px;
+  cursor: pointer;
 }
