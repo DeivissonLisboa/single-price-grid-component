@@ -103,6 +103,8 @@ div span {
 
 p[data-color="green"] {
   color: var(--clr-primary-2);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-2);
 }
 
 .button {
